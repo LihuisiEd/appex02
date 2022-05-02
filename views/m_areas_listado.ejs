@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Sistema de control de Ingreso</title>
+	</head>
+	<body>
+		<h1>Mantenimientos de Areas</h1>
+		<hr>
+		<p><a href="/m_areas_nuevo">Nueva Area</a></p>
+		<table border=1>
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>ABREVIATURA</th>
+				<th>ESTADO</th>
+				<th colspan=2>ACCIONES</th>
+			</tr>
+			<% records.forEach( function(areas){ %>
+				<tr>
+					<td><%= areas._id  %></td>
+					<td><%= areas.nombre  %></td>
+					<td><%= areas.abreviatura  %></td>
+					<td><%= areas.estado  %></td>
+					<td><a href="/m_areas_editar/<%= areas._id %>">Editar</a></td>
+					<td><a href="/m_areas_eliminar/<%= areas._id %>">Eliminar</a></td>
+				</tr>
+			<% }); %>
+		</table>
+	</body
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Sistema de control de ingreso</title>
+    </head>
+    <body>
+        <h1>Editar cargo</h1>
+        <hr>
+        <form action="/m_cargos_grabar_editar" method="POST">
+            <input type="text" hidden name="xid" id="xid" value="<%= cargo._id%>">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="xnom" id="xnom" size="30" value="<%= cargo.nombre %>"></td>
+                </tr>
+                <tr>
+                    <td>Sueldo:</td>
+                    <td><input type="text" name="xsue" id="xsue" size="10" value="<%= cargo.sueldo %>"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Grabar"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
